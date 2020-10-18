@@ -77,6 +77,4 @@ const PartsInputList = (props) => {
   ))
 }
 
-PartsInputList.propTypes = {}
-
 export default PartsInputList

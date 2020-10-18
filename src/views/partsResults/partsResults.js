@@ -6,9 +6,8 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 import Spinner from "react-bootstrap/Spinner"
 
-import PartsResultsTable from "../../components/partsResultsTable/partsResultsTable"
-
 import MainTemplate from "../../templates/main/main"
+import PartsResultsTable from "../../components/partsResultsTable/partsResultsTable"
 
 import "./partsResults.scss"
 
@@ -39,7 +38,5 @@ const PartResults = () => {
     </MainTemplate>
   )
 }
-
-PartResults.propTypes = {}
 
 export default PartResults

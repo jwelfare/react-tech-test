@@ -39,6 +39,4 @@ const PartsInputForm = () => {
   )
 }
 
-PartsInputForm.propTypes = {}
-
 export default PartsInputForm

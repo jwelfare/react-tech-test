@@ -1,10 +1,10 @@
 import React from "react"
 
-import MainTemplate from "../../templates/main/main"
-import PartsInputForm from "../../components/partsInputForm/partsInputForm"
-
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
+
+import MainTemplate from "../../templates/main/main"
+import PartsInputForm from "../../components/partsInputForm/partsInputForm"
 
 const PartLookup = () => {
   return (
@@ -24,7 +24,5 @@ const PartLookup = () => {
     </MainTemplate>
   )
 }
-
-PartLookup.propTypes = {}
 
 export default PartLookup
