@@ -39,10 +39,11 @@ const PartsInputList = (props) => {
               message: "Part identifier is required",
             },
             pattern: {
-              value: /^\d{4}-[a-zA-Z0-9_]{4,}/i,
+              value: /^\d{4}-[a-zA-Z0-9_]{4,}$/i,
               message: "Part identifier must be in the format: 1234-xxxx",
             },
           })}
+          autocomplete="off"
           id={`partsInputs[${index}].PartNumber`}
           name={`partsInputs[${index}].PartNumber`}
           isInvalid={errors["partsInputs"] && errors["partsInputs"][index]}
