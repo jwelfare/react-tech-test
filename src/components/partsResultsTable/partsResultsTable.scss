@@ -1,7 +1,17 @@
 div.card-header {
   background-color: lighten(green, 50%);
+  padding: 0;
 }
 
 .card-header.excluded {
   background-color: lighten(red, 30%);
+}
+
+.card-header button {
+  color: black;
+  height: 100%;
+  padding: 12px 20px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
 }

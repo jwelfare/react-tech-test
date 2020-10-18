@@ -43,7 +43,7 @@ const PartsInputList = (props) => {
               message: "Part identifier must be in the format: 1234-xxxx",
             },
           })}
-          autocomplete="off"
+          autoComplete="off"
           id={`partsInputs[${index}].PartNumber`}
           name={`partsInputs[${index}].PartNumber`}
           isInvalid={errors["partsInputs"] && errors["partsInputs"][index]}

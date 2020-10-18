@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Accordion from "react-bootstrap/Accordion"
+import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 import Table from "react-bootstrap/Table"
 
@@ -14,14 +15,20 @@ const PartsResults = (props) => {
     <Accordion defaultActiveKey="0">
       {partsResults.map((part, index) => (
         <Card key={index}>
-          <Accordion.Toggle
-            as={Card.Header}
-            eventKey={`${index}`}
-            className={`${part.wasExcluded ? "excluded" : ""}`}
-          >
-            {part.PartNumber}
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey={`${index}`}>
+          <Card.Header>
+            <Accordion.Toggle
+              as={Button}
+              variant="link"
+              eventKey={`${index}`}
+              className={`${part.wasExcluded ? "excluded" : ""}`}
+              role="button"
+              aria-controls={`result-${index}`}
+              tabIndex="0"
+            >
+              {part.PartNumber}
+            </Accordion.Toggle>
+          </Card.Header>
+          <Accordion.Collapse id={`result-${index}`} eventKey={`${index}`}>
             <Card.Body>
               {!part.wasExcluded && (
                 <Table striped bordered>
