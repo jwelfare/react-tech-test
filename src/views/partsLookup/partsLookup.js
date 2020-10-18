@@ -12,8 +12,7 @@ const PartLookup = () => {
       <Row>
         <Col>
           <p>
-            You can use this form to look up compatible parts, parts entered in
-            your exclusion list won't be included
+            {`You can use this form to look up compatible parts, parts entered in your exclusion list won't be included`}
           </p>
         </Col>
       </Row>

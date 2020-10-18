@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types';
 
 import Accordion from "react-bootstrap/Accordion"
 import Card from "react-bootstrap/Card"
@@ -45,6 +46,16 @@ const PartsResults = (props) => {
         </Card>
       ))}
     </Accordion>
+  )
+}
+
+PartsResults.propTypes = {
+  partsResults: PropTypes.arrayOf(
+    PropTypes.shape({
+      PartNumber: PropTypes.string,
+      AlternativeParts: PropTypes.array,
+      wasExcluded: PropTypes.bool
+    })
   )
 }
 

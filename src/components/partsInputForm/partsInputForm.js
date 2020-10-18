@@ -10,7 +10,7 @@ import PartsInputList from "../partsInputList/partsInputList"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 
-const PartsInputForm = (props) => {
+const PartsInputForm = () => {
   const dispatch = useDispatch()
   const history = useHistory()
 

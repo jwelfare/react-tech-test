@@ -11,7 +11,7 @@ import MainTemplate from "../../templates/main/main"
 
 import "./partsResults.scss"
 
-const PartResults = (props) => {
+const PartResults = () => {
   const results = useSelector((state) => state.userPartsList)
 
   return (
