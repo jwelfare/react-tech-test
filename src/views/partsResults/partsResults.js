@@ -1,5 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
+import { Redirect } from "react-router"
 
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
@@ -22,6 +23,10 @@ const PartResults = () => {
             <span className="sr-only">Loading...</span>
           </Spinner>
         </div>
+      )}
+
+      {!results.pending && results.partsResults.length === 0 && (
+        <Redirect to="/" />
       )}
 
       {!results.pending && results.partsResults && (

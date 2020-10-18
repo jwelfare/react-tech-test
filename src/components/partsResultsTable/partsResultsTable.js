@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types"
 
 import Accordion from "react-bootstrap/Accordion"
 import Card from "react-bootstrap/Card"
@@ -54,9 +54,9 @@ PartsResults.propTypes = {
     PropTypes.shape({
       PartNumber: PropTypes.string,
       AlternativeParts: PropTypes.array,
-      wasExcluded: PropTypes.bool
+      wasExcluded: PropTypes.bool,
     })
-  )
+  ),
 }
 
 export default PartsResults

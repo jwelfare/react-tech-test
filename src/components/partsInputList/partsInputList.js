@@ -25,7 +25,12 @@ const PartsInputList = (props) => {
 
   return fields.map((input, index) => (
     <FormGroup key={input.id}>
-      <Form.Label className="sr-only">Part ID</Form.Label>
+      <Form.Label
+        className="sr-only"
+        htmlFor={`partsInputs[${index}].PartNumber`}
+      >
+        Part ID
+      </Form.Label>
       <InputGroup>
         <FormControl
           ref={register({
@@ -38,6 +43,7 @@ const PartsInputList = (props) => {
               message: "Part identifier must be in the format: 1234-xxxx",
             },
           })}
+          id={`partsInputs[${index}].PartNumber`}
           name={`partsInputs[${index}].PartNumber`}
           isInvalid={errors["partsInputs"] && errors["partsInputs"][index]}
           placeholder="1234-partcode"
