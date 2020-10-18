@@ -1,0 +1,7 @@
+div.card-header {
+  background-color: lighten(green, 50%);
+}
+
+.card-header.excluded {
+  background-color: lighten(red, 30%);
+}
