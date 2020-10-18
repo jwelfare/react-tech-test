@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { useForm } from 'react-hook-form'
-import { useHistory } from 'react-router-dom'
+import React, { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { useForm } from "react-hook-form"
+import { useHistory } from "react-router-dom"
 
-import * as userPartsListActions from '../../ducks/userPartsList/actions'
+import * as userPartsListActions from "../../ducks/userPartsList/actions"
 
-import PartsInputList from '../partsInputList/partsInputList'
+import PartsInputList from "../partsInputList/partsInputList"
 
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
+import Button from "react-bootstrap/Button"
+import Form from "react-bootstrap/Form"
 
 const PartsInputForm = (props) => {
   const dispatch = useDispatch()
@@ -18,22 +18,19 @@ const PartsInputForm = (props) => {
     dispatch(userPartsListActions.fetchExclusions())
   }, [dispatch])
 
-  const {control, register, handleSubmit, errors} = useForm({
-    reValidateMode: 'onChange'
+  const { control, register, handleSubmit, errors } = useForm({
+    reValidateMode: "onChange",
   })
 
   const onSubmit = (formData) => {
     dispatch(userPartsListActions.requestPartsList(formData))
 
-    history.push('/results')
+    history.push("/results")
   }
 
   return (
     <Form noValidate onSubmit={handleSubmit(onSubmit)}>
-      <PartsInputList
-        register={register}
-        errors={errors}
-        control={control} />
+      <PartsInputList register={register} errors={errors} control={control} />
 
       <Button variant="primary" type="submit">
         Submit
@@ -42,7 +39,6 @@ const PartsInputForm = (props) => {
   )
 }
 
-PartsInputForm.propTypes = {
-}
+PartsInputForm.propTypes = {}
 
 export default PartsInputForm

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import Accordion from 'react-bootstrap/Accordion'
-import Card from 'react-bootstrap/Card'
-import Table from 'react-bootstrap/Table'
+import Accordion from "react-bootstrap/Accordion"
+import Card from "react-bootstrap/Card"
+import Table from "react-bootstrap/Table"
 
-import './partsResultsTable.scss'
+import "./partsResultsTable.scss"
 
 const PartsResults = (props) => {
   const { partsResults } = props
@@ -13,11 +13,12 @@ const PartsResults = (props) => {
     <Accordion defaultActiveKey="0">
       {partsResults.map((part, index) => (
         <Card key={index}>
-          <Accordion.Toggle 
-            as={Card.Header} 
-            eventKey={`${index}`} 
-            className={`${part.wasExcluded ? 'excluded' : ''}`}>
-              {part.PartNumber}
+          <Accordion.Toggle
+            as={Card.Header}
+            eventKey={`${index}`}
+            className={`${part.wasExcluded ? "excluded" : ""}`}
+          >
+            {part.PartNumber}
           </Accordion.Toggle>
           <Accordion.Collapse eventKey={`${index}`}>
             <Card.Body>
@@ -38,9 +39,7 @@ const PartsResults = (props) => {
                   </tbody>
                 </Table>
               )}
-              {part.wasExcluded && (
-                <p>This part was excluded</p>
-              )}
+              {part.wasExcluded && <p>This part was excluded</p>}
             </Card.Body>
           </Accordion.Collapse>
         </Card>

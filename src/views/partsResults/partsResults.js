@@ -1,22 +1,22 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from "react"
+import { useSelector } from "react-redux"
 
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
-import Spinner from 'react-bootstrap/Spinner'
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
+import Spinner from "react-bootstrap/Spinner"
 
-import PartsResultsTable from '../../components/partsResultsTable/partsResultsTable'
+import PartsResultsTable from "../../components/partsResultsTable/partsResultsTable"
 
-import MainTemplate from '../../templates/main/main'
+import MainTemplate from "../../templates/main/main"
 
-import './partsResults.scss'
+import "./partsResults.scss"
 
 const PartResults = (props) => {
   const results = useSelector((state) => state.userPartsList)
 
   return (
     <MainTemplate>
-      { results.pending && (
+      {results.pending && (
         <div className="overlay d-flex justify-content-center align-items-center">
           <Spinner animation="border" role="status" size="lg">
             <span className="sr-only">Loading...</span>
@@ -24,7 +24,7 @@ const PartResults = (props) => {
         </div>
       )}
 
-      { !results.pending && results.partsResults && (
+      {!results.pending && results.partsResults && (
         <Row>
           <Col>
             <PartsResultsTable partsResults={results.partsResults} />
@@ -35,8 +35,6 @@ const PartResults = (props) => {
   )
 }
 
-PartResults.propTypes = {
-
-}
+PartResults.propTypes = {}
 
 export default PartResults

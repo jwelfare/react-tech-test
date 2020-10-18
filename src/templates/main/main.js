@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
 const main = (props) => {
   return (
@@ -18,28 +18,20 @@ const main = (props) => {
       </header>
 
       <main>
-        <Container>
-          {props.children}
-        </Container>
+        <Container>{props.children}</Container>
       </main>
 
       <footer>
         <Container className="mt-5">
           <Row>
             <Col>
-              <ul className="list-inline">
-                { [
-                    { target: "#blah", label: "Link 1" },
-                    { target: "#blah", label: "Link 2" },
-                    { target: "#blah", label: "Link 3" },
-                  ].map((curr, key) => (
-                  <li key={key} className="list-inline-item">
-                    <a href={curr.target} alt={`Find out more about ${curr.label}`}>
-                      {curr.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/jwelfare"
+              >
+                GitHub
+              </a>
             </Col>
           </Row>
         </Container>
